@@ -275,26 +275,92 @@
         pointer-events: none;
       }
 
+      /* Left Ad Rail */
+      .ad-rail-left {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 160px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+      }
 
+      .ad-rail-left .ad-container {
+        position: sticky;
+        top: 0;
+        width: 160px;
+        height: 600px;
+      }
+
+      /* Shift page content to the right of ad rail */
+      body {
+        margin-left: 160px;
+      }
+
+      /* Override nav to start after ad rail */
+      nav {
+        left: 160px !important;
+        width: calc(100% - 160px) !important;
+      }
+
+      /* Top right banner ad */
+      .top-right-banner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 728px;
+        height: 90px;
+        z-index: 10001;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
 
 
       
     </style>
   
-
-  
 </head>
 <body>
 
-
-  <div class="social-icons" style="display: flex; align-items: center; gap: 20px;">
-      <a href="https://discord.com/invite/nebulaplay" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: white;">
-          <img src="/images/discord-round-color-icon.webp" style="width: 60px; height: 60px;">
-          <h3 style="margin: 0 0 0 15px; color: white; font-size: 24px;">
-              Discord.gg/NebulaPlay<br>For Unblocked Links
-          </h3>
-      </a>
+<!-- Left Ad Rail -->
+<div class="ad-rail-left">
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '60d8f46060c0b8cc1916b42e58bbaa32',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//creaturefeaturesmouse.com/60d8f46060c0b8cc1916b42e58bbaa32/invoke.js"
+    ></script>
   </div>
+</div>
+
+<!-- Top Right Banner Ad -->
+<div class="top-right-banner">
+  <script type="text/javascript">
+    atOptions = {
+      'key' : 'aeb0dc35e1a9a93d2ad33966d116c87a',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//creaturefeaturesmouse.com/aeb0dc35e1a9a93d2ad33966d116c87a/invoke.js"
+  ></script>
+</div>
 
   <nav>
       <a class="logo-link" data-href="/" style="cursor:pointer;">
@@ -1544,9 +1610,10 @@ document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
 })();
 </script>
 
-<script
-  type="text/javascript"
-  src="//creaturefeaturesmouse.com/fa/35/f3/fa35f3564c7c8cbb3678afed6b284fd0.js"
-></script>
+  <script
+    type="text/javascript"
+    src="//creaturefeaturesmouse.com/fa/35/f3/fa35f3564c7c8cbb3678afed6b284fd0.js"
+  ></script>
+  
 </body>
 </html>
