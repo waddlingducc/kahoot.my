@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <script type="text/javascript">
+      aclib.runInterstitial({
+          zoneId: '10688458',
+      });
+  </script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYG9HZ54L2"></script>
 <script>
@@ -284,6 +291,7 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 9999;
+        border-radius: 0;
       }
 
       .ad-rail-left .ad-container {
@@ -291,6 +299,14 @@
         top: 0;
         width: 160px;
         height: 600px;
+        border-radius: 0;
+      }
+
+      /* Force no rounded corners on ad iframes */
+      .ad-rail-left iframe,
+      .ad-container iframe,
+      .top-right-banner iframe {
+        border-radius: 0 !important;
       }
 
       /* Shift page content to the right of ad rail */
@@ -330,18 +346,10 @@
 <div class="ad-rail-left">
   <div class="ad-container">
     <script type="text/javascript">
-      atOptions = {
-        'key' : '60d8f46060c0b8cc1916b42e58bbaa32',
-        'format' : 'iframe',
-        'height' : 600,
-        'width' : 160,
-        'params' : {}
-      };
+        aclib.runBanner({
+            zoneId: '10688422',
+        });
     </script>
-    <script
-      type="text/javascript"
-      src="//creaturefeaturesmouse.com/60d8f46060c0b8cc1916b42e58bbaa32/invoke.js"
-    ></script>
   </div>
 </div>
 
