@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-  <script type="text/javascript">
-      aclib.runInterstitial({
-          zoneId: '10688458',
-      });
-  </script>
-  
-  <script type="text/javascript">
-    aclib.runVideoSlider({
-        zoneId: '10688530',
-    });
-</script>
-
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYG9HZ54L2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -288,6 +275,17 @@
         pointer-events: none;
       }
 
+      /* Bottom right sticky ad */
+      .bottom-right-ad {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        height: 250px;
+        z-index: 10001;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
       /* Left Ad Rail */
       .ad-rail-left {
         position: fixed;
@@ -311,7 +309,8 @@
       /* Force no rounded corners on ad iframes */
       .ad-rail-left iframe,
       .ad-container iframe,
-      .top-right-banner iframe {
+      .top-right-banner iframe,
+      .bottom-right-ad iframe {
         border-radius: 0 !important;
       }
 
@@ -326,20 +325,7 @@
         width: calc(100% - 160px) !important;
       }
 
-      /* Top right banner ad */
-      .top-right-banner {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 728px;
-        height: 90px;
-        z-index: 10001;
-        background-color: rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0;
-      }
+      
 
 
       
@@ -352,29 +338,22 @@
 <div class="ad-rail-left">
   <div class="ad-container">
     <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '10688422',
-        });
+      atOptions = {
+        'key' : '60d8f46060c0b8cc1916b42e58bbaa32',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
     </script>
+    <script
+      type="text/javascript"
+      src="//creaturefeaturesmouse.com/60d8f46060c0b8cc1916b42e58bbaa32/invoke.js"
+    ></script>
   </div>
 </div>
 
-<!-- Top Right Banner Ad -->
-<div class="top-right-banner">
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'aeb0dc35e1a9a93d2ad33966d116c87a',
-      'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
-      'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="//creaturefeaturesmouse.com/aeb0dc35e1a9a93d2ad33966d116c87a/invoke.js"
-  ></script>
-</div>
+
 
   <nav>
       <a class="logo-link" data-href="/" style="cursor:pointer;">
@@ -1624,10 +1603,22 @@ document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
 })();
 </script>
 
+<!-- Bottom Right Ad -->
+<div class="bottom-right-ad">
+  <script type="text/javascript">
+    atOptions = {
+      'key' : 'cca6e5f238bfb4e9f1b482f73b15c7b2',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  </script>
   <script
     type="text/javascript"
-    src="//creaturefeaturesmouse.com/fa/35/f3/fa35f3564c7c8cbb3678afed6b284fd0.js"
+    src="https://creaturefeaturesmouse.com/cca6e5f238bfb4e9f1b482f73b15c7b2/invoke.js"
   ></script>
-  
+</div>
+
 </body>
 </html>
